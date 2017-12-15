@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Gift Registry Service</title>
+<!-- <script src="js/bundle.js"></script> -->
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom fonts for this template -->
+    <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
+
+    <!-- Custom styles for this template -->
+    <link href="css/landing-page.css" rel="stylesheet">
+    <link href="css/signup.css" rel="stylesheet">
+
+  </head>
+
+  <body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+      <div class="container">
+        <a class="navbar-brand" href="#">Online Gift Registry</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="#">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Services</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+      <div class="container" style="margin-top: 10%; margin-bottom: 20%;">
+
+  <div class="row">
+      <div class="col-xs-12 col-sm-8 col-md-6 col-sm-offset-2 col-md-offset-3">
+  		<form role="form">
+  			<h2>Please Sign Up</h2>
+  			<hr class="colorgraph">
+  			<div class="row">
+  				<div class="col-xs-12 col-sm-6 col-md-6">
+  					<div class="form-group">
+              <input type="text" name="first_name" id="form-signup-firstname" class="form-control input-lg" placeholder="First Name" tabindex="1">
+  					</div>
+  				</div>
+  				<div class="col-xs-12 col-sm-6 col-md-6">
+  					<div class="form-group">
+  						<input type="text" name="last_name" id="form-signup-lastname" class="form-control input-lg" placeholder="Last Name" tabindex="2">
+  					</div>
+  				</div>
+  			</div>
+  			<div class="form-group">
+  				<input type="text" name="user_name" id="form-signup-username" class="form-control input-lg" placeholder="User Name" tabindex="3">
+  			</div>
+  			<div class="form-group">
+  				<input type="email" name="email" id="form-signup-email" class="form-control input-lg" placeholder="Email Address" tabindex="4">
+  			</div>
+  			<div class="row">
+  				<div class="col-xs-12 col-sm-6 col-md-6">
+  					<div class="form-group">
+  						<input type="password" name="password" id="form-signup-password" class="form-control input-lg" placeholder="Password" tabindex="5">
+  					</div>
+  				</div>
+  				<div class="col-xs-12 col-sm-6 col-md-6">
+  					<div class="form-group">
+  						<input type="password" name="password_confirmation" id="password_confirmation" class="form-control input-lg" placeholder="Confirm Password" tabindex="6">
+  					</div>
+  				</div>
+  			</div>
+  			<div class="row">
+  				<div class="col-xs-4 col-sm-3 col-md-3">
+  					<span class="button-checkbox">
+  						<button type="button" class="btn" data-color="info" tabindex="7">&nbsp;&nbsp;&nbsp;&nbsp;Agree</button>
+                          <input type="checkbox" name="t_and_c" id="t_and_c" class="hidden" value="1" style="margin-left: -66%;">
+  					</span>
+  				</div>
+  				<div class="col-xs-8 col-sm-9 col-md-9">
+  					 By clicking <strong class="label label-primary">Register</strong>, you agree to the <a href="#" data-toggle="modal" data-target="#t_and_c_m">Terms and Conditions</a> set out by this site, including our Cookie Use.
+  				</div>
+  			</div>
+
+  			<hr class="colorgraph">
+  			<div class="row">
+  				<div class="col-xs-12 col-md-6"><input type="button" id= "form-register" value="Register" class="btn btn-primary btn-block btn-lg" tabindex="7"></div>
+  			</div>
+  		</form>
+  	</div>
+  </div>
+  <!-- Modal -->
+  <div class="modal fade" id="t_and_c_m" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  	<div class="modal-dialog modal-lg">
+  		<div class="modal-content">
+  			<div class="modal-header" style="color: #047bff; margin: -10px -3px -16px auto;">
+  				<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+  				<h4 class="modal-title" id="myModalLabel">Terms & Conditions</h4>
+  			</div>
+  			<div class="modal-body" style="padding: 49px;">
+          Welcome to our website. If you continue to browse and use this website, you are agreeing to comply with and be bound by the following terms and conditions of use, which together with our privacy policy govern our relationship with you in relation to this website. If you disagree with any part of these terms and conditions, please do not use our website.
+          The term 'our' or ‘us’ or ‘we’ refers to the owner of the website whose registered office is [address]. Our company registration number is [company registration number and place of registration]. The term ‘you’ refers to the user or viewer of our website.
+          The use of this website is subject to the following terms of use:
+<p>This website uses cookies to monitor browsing preferences. If you do allow cookies to be used, the following personal information may be stored by us for use by third parties: [insert list of information].</p>
+<p>Neither we nor any third parties provide any warranty or guarantee as to the accuracy, timeliness, performance, completeness or suitability of the information and materials found or offered on this website for any particular purpose. You acknowledge that such information and materials may contain inaccuracies or errors and we expressly exclude liability for any such inaccuracies or errors to the fullest extent permitted by law.</p>
+  			</div>
+  			<div class="modal-footer">
+  				<button type="button" class="btn btn-primary" data-dismiss="modal">I Agree</button>
+  			</div>
+  		</div><!-- /.modal-content -->
+  	</div><!-- /.modal-dialog -->
+  </div><!-- /.modal -->
+  </div>
+
+
+    <!-- Page Content -->
+    <footer>
+      <div class="container">
+        <ul class="list-inline">
+          <li class="list-inline-item">
+            <a href="#">Home</a>
+          </li>
+          <li class="footer-menu-divider list-inline-item">&sdot;</li>
+          <li class="list-inline-item">
+            <a href="#about">About</a>
+          </li>
+          <li class="footer-menu-divider list-inline-item">&sdot;</li>
+          <li class="list-inline-item">
+            <a href="#services">Services</a>
+          </li>
+          <li class="footer-menu-divider list-inline-item">&sdot;</li>
+          <li class="list-inline-item">
+            <a href="#contact">Contact</a>
+          </li>
+        </ul>
+        <p class="copyright text-muted small">Copyright &copy; Your Company 2017. All Rights Reserved</p>
+      </div>
+    </footer>
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+      <script src="js/signup.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  </body>
+
+</html>

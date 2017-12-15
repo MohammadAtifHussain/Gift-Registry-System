@@ -1,0 +1,127 @@
+
+CREATE TABLE `share` (
+  `myusername` varchar(25) NOT NULL,
+   `friendusername` varchar(25) NOT NULL
+   );
+
+  INSERT INTO `registry`.`share` VALUES ('atif', 'pranav');
+  INSERT INTO `registry`.`share` VALUES ('atif', 'divya');
+    INSERT INTO `registry`.`share` VALUES ('divya', 'amit');
+    INSERT INTO `registry`.`share` VALUES ('divya', 'atif');
+  INSERT INTO `registry`.`share` VALUES ('pranav', 'divya');
+   INSERT INTO `registry`.`share` VALUES ('divya', 'pranav');
+  INSERT INTO `registry`.`share` VALUES ('atif', 'amit');
+    INSERT INTO `registry`.`share` VALUES ('pranav', 'amit');
+    INSERT INTO `registry`.`share` VALUES ('amit', 'pranav');
+
+
+CREATE TABLE `userregistry` (
+  `username` varchar(25) NOT NULL,
+  `ProductId` int NOT NULL,
+  `ProductName` varchar(25) NOT NULL,
+   `ProductCategory` varchar(25) NOT NULL,
+	`ProductBrand` varchar(25) NOT NULL,
+  `ProductPrice` float NOT NULL,
+  `ProductColor` varchar(100) NOT NULL
+) ;
+
+ALTER TABLE registry.userregistry
+  ADD purchaser varchar(50) DEFAULT 'None';
+
+
+
+
+
+
+
+
+
+
+
+ALTER TABLE registry.users drop Birth_date, DROP Gender, drop City, drop State, drop Country;
+ALTER TABLE registry.users DROP Ph_No, drop Address_Line1, drop Address_Line2, drop Image, drop Last_login,drop No_failed_login;
+
+ALTER TABLE registry.users CHANGE U_First_Name firstname varchar(25);
+ALTER TABLE registry.users CHANGE U_Last_Name lastname varchar(25);
+
+
+
+Drop table registry.catalog;
+
+USE `registry`;
+CREATE TABLE `catalog` (
+  `ProductId` int NOT NULL AUTO_INCREMENT PRIMARY KEY,
+  `ProductName` varchar(25) NOT NULL,
+   `ProductCategory` varchar(25) NOT NULL,
+	`ProductBrand` varchar(25) NOT NULL,
+  `ProductPrice` float NOT NULL,
+  `ProductColor` varchar(100) NOT NULL
+) ;
+
+
+
+INSERT INTO `catalog` VALUES (DEFAULT,'Apple Iphone SE','Electronics','Apple',500,'Black');
+INSERT INTO `catalog` VALUES (DEFAULT,'Apple Earphones','Electronics','Apple',40,'White');
+
+INSERT INTO `catalog` VALUES (DEFAULT,'Amazon Echo Dot','Electronics','Amazon',50,'Black');
+INSERT INTO `catalog` VALUES (DEFAULT,'Amazon Kjndle Paperwhite','Electronics','Amazon',75,'Black');
+
+INSERT INTO `catalog` VALUES (DEFAULT,'The Alchemist','Books','Penguin Publishing',10,'White');
+INSERT INTO `catalog` VALUES (DEFAULT,'The Origin','Books','Penguin Publishing',20,'White');
+
+INSERT INTO `catalog` VALUES (DEFAULT,'Jack Reacher','Books','Mass Market Publishing',20,'White');
+INSERT INTO `catalog` VALUES (DEFAULT,'The Rooster Bar','Books','Mass Market Publishing',25,'White');
+
+INSERT INTO `catalog` VALUES (DEFAULT,'Casual Jacketr','Clothing','Lacoste',40,'Green');
+INSERT INTO `catalog` VALUES (DEFAULT,'Apple Watch Series 2','Clothing','Apple',250,'Black');
+INSERT INTO `catalog` VALUES (DEFAULT,'Long Sleeve Shirt','Clothing','Lacoste',150,'Blue');
+INSERT INTO `catalog` VALUES (DEFAULT,'Slim Fit Textured Stretch Chino','Clothing','Lacoste',70,'Green');
+INSERT INTO `catalog` VALUES (DEFAULT,'Casual Shirt','Clothing','Lacoste',160,'Blue');
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  CREATE DATABASE  IF NOT EXISTS `registry` /*!40100 DEFAULT CHARACTER SET utf8 */;
+USE `registry`;
+-- MySQL dump 10.13  Distrib 5.7.12, for Win64 (x86_64)
+--
+-- Host: localhost    Database: user_data
+-- ------------------------------------------------------
+-- Server version	5.7.16-log
+
+
+CREATE TABLE `users` (
+  `Username` varchar(25) NOT NULL,
+  `U_First_Name` varchar(25) NOT NULL,
+  `U_Last_Name` varchar(25) NOT NULL,
+  `Pass` char(32) NOT NULL,
+   `Role` char(32) NOT NULL,
+  `Email_Id` varchar(35) NOT NULL,
+  `Birth_date` date NOT NULL,
+  `Gender` char(9) NOT NULL,
+  `City` char(20) NOT NULL,
+  `State` char(20) NOT NULL,
+  `Country` varchar(20) NOT NULL,
+  `Ph_No` varchar(10) DEFAULT NULL,
+  `Address_Line1` varchar(35) DEFAULT NULL,
+  `Address_Line2` varchar(35) DEFAULT NULL,
+  `Image` mediumblob,
+  `Last_login` datetime DEFAULT NULL,
+  `No_failed_login` int(11) NOT NULL,
+  PRIMARY KEY (`Username`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+INSERT INTO `users` VALUES ('amit','Amitabh','Bachan','amit2007','admin','mastraghav@gmail.com','2016-11-25','male','Cookeville','Texas','United States','9803354444','Turnpike','#210','/Users/Dungeoun/Documents/Amit Resume/amit.jpg','2016-12-01 05:08:05',14),('deep','amita','Mathur','1910','deepanverma55@gmal.com','1996-10-25','male','Dallas','Texas','United States','9891230945','777','abc mcclam',NULL,'2016-11-29 22:34:43',0),('mastraghav','Raghav','Mathur','saubhagya','mastraghav@outlook.com','1993-05-05','male','Dallas','Texas','United States','9803357973','mccallum blvd','apt 142',NULL,'2016-12-01 00:09:47',0);

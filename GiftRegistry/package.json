@@ -1,0 +1,20 @@
+{
+  "name": "giftregistry",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "compression": "^1.7.1",
+    "express": "^4.16.2",
+    "nodemon": "^1.12.1",
+    "request": "^2.83.0",
+    "unirest": "^0.5.1"
+  }
+}
